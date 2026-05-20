@@ -81,7 +81,7 @@ export async function POST(req) {
     const { messages } = await req.json()
 
     const response = await client.messages.create({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-6',
       max_tokens: 1024,
       system: `You are a professional Finance AI Agent. Help users with stock prices, currency conversion, compound interest, portfolio analysis, and budget planning. Always use tools when data is needed — never guess numbers. After showing tool results, provide a brief 1-2 sentence insight or recommendation.`,
       tools,
